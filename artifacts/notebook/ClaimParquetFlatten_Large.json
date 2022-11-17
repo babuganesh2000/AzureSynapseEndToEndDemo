@@ -20,7 +20,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "ea101bd9-2c86-4e14-9d2f-14ead77dd1f9"
+				"spark.autotune.trackingId": "e8b71090-5e21-42c9-b918-6cda2f8e243b"
 			}
 		},
 		"metadata": {
@@ -119,7 +119,7 @@
 				"source": [
 					"display(Claim_df.limit(10))"
 				],
-				"execution_count": 3
+				"execution_count": 6
 			},
 			{
 				"cell_type": "code",
@@ -137,7 +137,7 @@
 				"source": [
 					"Claim_df.printSchema()"
 				],
-				"execution_count": 4
+				"execution_count": 7
 			},
 			{
 				"cell_type": "code",
@@ -173,7 +173,7 @@
 					"# adding schema optimization\r\n",
 					"# Arshad"
 				],
-				"execution_count": 5
+				"execution_count": 8
 			},
 			{
 				"cell_type": "code",
@@ -191,7 +191,7 @@
 				"source": [
 					"Claim_main_df.printSchema()"
 				],
-				"execution_count": 6
+				"execution_count": 9
 			},
 			{
 				"cell_type": "code",
@@ -210,7 +210,7 @@
 				"source": [
 					"display(Claim_main_df.limit(10))"
 				],
-				"execution_count": 7
+				"execution_count": 10
 			},
 			{
 				"cell_type": "code",
@@ -228,7 +228,7 @@
 				"source": [
 					"Claim_main_df.count()"
 				],
-				"execution_count": 8
+				"execution_count": 11
 			},
 			{
 				"cell_type": "code",
@@ -246,7 +246,7 @@
 				"source": [
 					"Claim_main_df.write.mode(write_mode).parquet(curated_location+\"Claim_main/\")"
 				],
-				"execution_count": 16
+				"execution_count": 12
 			},
 			{
 				"cell_type": "code",
@@ -276,7 +276,7 @@
 					"\r\n",
 					"#    base_df_explode = base_df.select(explode(base_df.entry))"
 				],
-				"execution_count": 9
+				"execution_count": 13
 			},
 			{
 				"cell_type": "code",
@@ -294,7 +294,7 @@
 				"source": [
 					"Claim_insurance_df.printSchema()"
 				],
-				"execution_count": 10
+				"execution_count": 15
 			},
 			{
 				"cell_type": "code",
@@ -313,7 +313,7 @@
 				"source": [
 					"display(Claim_insurance_df.limit(10))"
 				],
-				"execution_count": 11
+				"execution_count": 16
 			},
 			{
 				"cell_type": "code",
@@ -331,7 +331,7 @@
 				"source": [
 					"Claim_insurance_df.count()"
 				],
-				"execution_count": 12
+				"execution_count": 17
 			},
 			{
 				"cell_type": "code",
@@ -349,7 +349,7 @@
 				"source": [
 					"Claim_insurance_df.write.mode(write_mode).parquet(curated_location+\"Claim_insurance/\")"
 				],
-				"execution_count": 17
+				"execution_count": 18
 			},
 			{
 				"cell_type": "code",
@@ -381,7 +381,7 @@
 					"Claim_diagnosis_df=Claim_diagnosis_df.withColumn(\r\n",
 					"    \"diagnosis_reference\",regexp_replace(\"diagnosis_reference\",\"Condition/\",\"\"))    "
 				],
-				"execution_count": 3
+				"execution_count": 20
 			},
 			{
 				"cell_type": "code",
@@ -399,7 +399,7 @@
 				"source": [
 					"Claim_diagnosis_df.printSchema()"
 				],
-				"execution_count": 20
+				"execution_count": 21
 			},
 			{
 				"cell_type": "code",
@@ -417,7 +417,7 @@
 				"source": [
 					"Claim_diagnosis_df.write.mode(write_mode).parquet(curated_location+\"Claim_diagnosis/\")"
 				],
-				"execution_count": 4
+				"execution_count": 22
 			},
 			{
 				"cell_type": "code",
@@ -447,7 +447,7 @@
 					"    \"Claim_id\",\"procedure_reference\",\"procedure_sequence\"))\r\n",
 					"Claim_procedure_df=Claim_procedure_df.withColumn(\"procedure_reference\",regexp_replace(\"procedure_reference\",\"Procedure/\",\"\"))"
 				],
-				"execution_count": 3
+				"execution_count": 23
 			},
 			{
 				"cell_type": "code",
@@ -466,7 +466,7 @@
 				"source": [
 					"display(Claim_procedure_df.limit(10))"
 				],
-				"execution_count": 4
+				"execution_count": 24
 			},
 			{
 				"cell_type": "code",
@@ -484,7 +484,7 @@
 				"source": [
 					"Claim_procedure_df.write.mode(write_mode).parquet(curated_location+\"Claim_procedure/\")"
 				],
-				"execution_count": 5
+				"execution_count": 25
 			},
 			{
 				"cell_type": "code",

@@ -242,7 +242,7 @@
 			},
 			"SparkPoolName": {
 				"type": "string",
-				"defaultValue": "gkhealthcare01sqlpool01 "
+				"defaultValue": "gksparkpool01"
 			},
 			"DatasetSize": {
 				"type": "string",

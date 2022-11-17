@@ -182,7 +182,8 @@
 		],
 		"parameters": {
 			"TargetStorageName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "gkhealthcare01adls2"
 			},
 			"DatasetSize": {
 				"type": "string",

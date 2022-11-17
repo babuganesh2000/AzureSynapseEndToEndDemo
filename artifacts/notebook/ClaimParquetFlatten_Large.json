@@ -20,7 +20,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "4",
 				"spark.dynamicAllocation.maxExecutors": "4",
-				"spark.autotune.trackingId": "f6bbd8e2-1229-423c-bf5f-0432650ae015"
+				"spark.autotune.trackingId": "1ef46641-ff70-4aef-a972-5c3428b37047"
 			}
 		},
 		"metadata": {
@@ -36,17 +36,10 @@
 			"a365ComputeOptions": {
 				"id": "/subscriptions/7e416de3-c506-4776-8270-83fd73c6cc37/resourceGroups/syne2e/providers/Microsoft.Synapse/workspaces/health/bigDataPools/healthcare",
 				"name": "healthcare",
-				"type": "Spark",
-				"endpoint": "https://health.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/healthcare",
 				"auth": {
 					"type": "AAD",
 					"authResource": "https://dev.azuresynapse.net"
-				},
-				"sparkVersion": "3.1",
-				"nodeCount": 3,
-				"cores": 16,
-				"memory": 112,
-				"automaticScaleJobs": false
+				}
 			},
 			"sessionKeepAliveTimeout": 180
 		},
@@ -59,7 +52,7 @@
 					]
 				},
 				"source": [
-					"StorageName = \"medicaldl\"\r\n",
+					"StorageName = \"gkhealthcare01adls2\"\r\n",
 					"DatasetSize = \"1tb\""
 				],
 				"execution_count": 1
